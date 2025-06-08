@@ -304,6 +304,13 @@ margin-bottom: 135px;
     .bottom_bar {
        &>div:nth-child(2) {
         overflow-x: auto;
+        &>div {
+            @media (max-width:469px) {
+            width: 210px;
+            padding: 10px;
+            border-radius: 20px;
+            }
+        }
        }
         img {
             width: 48px;
