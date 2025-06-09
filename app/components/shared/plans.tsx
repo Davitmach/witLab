@@ -1,6 +1,14 @@
+'use client';
+import Link from "next/link"
+import { useState } from "react";
+import { Reg } from "./reg";
+import { Login } from "./log";
+
 export const Plans = ()=> {
+     const [activeReg,setActiveReg] = useState(false);
+      const [activeLogin,setActiveLogin] = useState(false);
     return(
-      
+      <>
         <div className="plans_container max-w-[1440px] !mx-auto w-full ">
 <div className="px-[100px] py-[44px] flex flex-col items-center justify-center gap-[44px]">
     <div><h1 className="max-w-[1020px] font-[700] text-[60px] text-[#111827] text-center">Start Your Personalized 7-Day Experience</h1></div>
@@ -34,9 +42,13 @@ export const Plans = ()=> {
             <div><p className=" max-w-[420px] w-full font-[600] text-[#6E6E73] text-[16px]">Just $1.00 for the first 7 days, then $19.00/month</p></div>
         </div>
     </div>
-    <div><button className="cursor-pointer bg text-white w-[212px] h-[52px] rounded-[99999px] font-[500] text-[18px]">View Plans</button></div>
+    <div><button className="cursor-pointer bg text-white w-[212px] h-[52px] rounded-[99999px] font-[500] text-[18px]" onClick={()=> {
+        setActiveReg(true)
+    }}>View Plans</button></div>
 </div>
         </div>
-    
+        {activeLogin&& <Login setActiveLog={setActiveLogin} setActiveReg={setActiveReg}/>}
+         {activeReg && <Reg setActiveLog={setActiveLogin} setActiveReg={setActiveReg}/>}
+    </>
     )
 }

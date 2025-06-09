@@ -555,6 +555,7 @@ footer {
 }
 
 .animate-scroll {
+  
   animation: scroll 30s linear infinite;
   @media (max-width:1000px) {
     gap: 30px;
