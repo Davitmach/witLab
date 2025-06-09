@@ -14,14 +14,14 @@ export const Header = ()=> {
         <header className="z-[999999] backdrop-blur-[20px]    sticky top-[0] w-full px-[104px] py-[22px] flex justify-between items-center border-b border-[#E5E7EB]">
          
             <div className="max-w-[1440px] w-full mx-auto flex justify-between items-center  ">
-            <div className="logo"><h1 className="flex text-[20px] font-[700] text-[#6E6E73]"><span className="text-[black]">W</span>IT LAB</h1></div>
+            <div className="logo"><a href="#" className="flex text-[20px] font-[700] text-[#6E6E73]"><span className="text-[black]">W</span>IT LAB</a></div>
             <div className={`menu ${first==true ? 'disableFirst' : active == true? 'activeMenu' :'disableMenu'}`}>
                 <ul className="flex items-center gap-[31px]">
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="">About us</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="">Categories</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="">Reviews</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="">FAQ</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="">Contact us</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#">Home</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#InfoBlock">How It Works</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#Reviews">Reviews</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#trust">Why Trust Us</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#question">FAQ</a></li>
                 </ul>
             </div>
             <div className="user flex gap-[20px] items-center w-[200px]"><button className="text-nowrap rounded-[999999px] w-[90px] h-[40px] flex items-center font-[inter] justify-center text-black font-[500] cursor-pointer text-[16px]" onClick={()=> {

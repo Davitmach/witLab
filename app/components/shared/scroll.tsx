@@ -37,9 +37,9 @@ export const Scroll = () => {
   useEffect(() => {
     const container = scrollRef.current;
     if (!inView || !container) return;
-container.scrollIntoView({
-    behavior:'smooth'
-})
+// container.scrollIntoView({
+//     behavior:'smooth'
+// })
     const onWheel = (e: WheelEvent) => {
       const deltaY = e.deltaY;
       const scrollTop = container.scrollTop;
@@ -57,7 +57,7 @@ container.scrollIntoView({
       if (canScrollInside) {
         
         
-        e.stopPropagation(); // блокируем скролл наружу
+        // e.stopPropagation(); // блокируем скролл наружу
       }
     };
 
@@ -118,19 +118,30 @@ container.scrollIntoView({
             </p>
           </div>
         </div>
-        <div className="emoji absolute left-[60%] top-[50%] translate-y-[-50%] w-[140px] h-[60px]">
-          <img
-            src={
-              activeSection === 1
-                ? "/emoji1.png"
-                : activeSection === 2
-                ? "/emoji2.png"
-                : "/emoji3.png"
-            }
-            alt={`emoji${activeSection}`}
-            className="w-[140px] h-[60px] object-contain"
-          />
-        </div>
+       <div className="emoji absolute left-[60%] top-[50%] translate-y-[-50%] w-[140px] h-[60px] transition-all duration-500 ease-in-out">
+  <img
+    src="/emoji1.png"
+    alt="emoji1"
+    className={`w-[140px] h-[60px] object-contain absolute top-0 left-0 transition-opacity duration-500 ${
+      activeSection === 1 ? 'opacity-100' : 'opacity-0'
+    }`}
+  />
+  <img
+    src="/emoji2.png"
+    alt="emoji2"
+    className={`w-[140px] h-[60px] object-contain absolute top-0 left-0 transition-opacity duration-500 ${
+      activeSection === 2 ? 'opacity-100' : 'opacity-0'
+    }`}
+  />
+  <img
+    src="/emoji3.png"
+    alt="emoji3"
+    className={`w-[140px] h-[60px] object-contain absolute top-0 left-0 transition-opacity duration-500 ${
+      activeSection === 3 ? 'opacity-100' : 'opacity-0'
+    }`}
+  />
+</div>
+
       </div>
     </div>
   );

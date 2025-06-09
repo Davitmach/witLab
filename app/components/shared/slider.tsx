@@ -8,8 +8,7 @@ export const Slider = () => {
     "/slider3.png",
     "/slider4.png",
     "/slider5.png",
-    "/slider6.png",
-    "/slider7.png",
+
   ];
 
   return (
@@ -17,7 +16,7 @@ export const Slider = () => {
       <div className="animate-scroll flex w-max gap-[85px] py-[58px]">
         {[...Array(2)].flatMap((_, repeatIndex) =>
           images.map((src, imgIndex) => (
-            <img src={src} key={`${repeatIndex}-${imgIndex}`} alt="" />
+            <img className={`${imgIndex==4 &&'sun'} ${imgIndex ==0&&'complex'}`} src={src} key={`${repeatIndex}-${imgIndex}`} alt="" />
           ))
         )}
       </div>

@@ -14,7 +14,7 @@ export const Questions = ()=> {
         setActive(Active)
     }
     return(
-        <div className="Questions_container max-w-[848px] w-full mx-auto pb-[247px] pt-[80px]">
+        <div id="question" className="Questions_container max-w-[848px] w-full mx-auto pb-[247px] pt-[80px]">
             <div className="questions_box flex flex-col items-center justify-center gap-[64px]">
                 <div className="info_box flex flex-col items-center justify-center gap-[20px]">
                     <h1 className="font-[600] text-[#111827] text-[60px] text-center">Frequently Asked Questions</h1>

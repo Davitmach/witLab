@@ -2,11 +2,11 @@ import Image from "next/image"
 
 export const Otziv = ()=> {
     return(
-         <div className="otziv_container max-w-[1440px] !mx-auto w-full ">
+         <div id="Reviews" className="otziv_container max-w-[1440px] !mx-auto w-full ">
 <div className="px-[100px] py-[44px] flex flex-col items-center justify-center gap-[44px]">
    <div className="top_bar w-full">
     <div className="flex items-center justify-center"><h1 className="font-[700] text-[#111827] text-[60px] text-center title">Millions of People Trust Us</h1></div>
-    <div className="flex w-full justify-between mt-[54px] points">
+    <div className="flex w-full justify-between mt-[54px] points items-start">
         <div className="flex items-center justify-center flex-col">
             <div className="flex flex-col items-center justify-center">
                 <div  style={{"background": "linear-gradient(90deg, #3B82F6 0%, #9333EA 100%)"}} className="img w-[64px] h-[64px] rounded-[50px] flex items-center justify-center"><svg width="31" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">

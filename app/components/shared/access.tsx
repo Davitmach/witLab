@@ -1,6 +1,14 @@
+'use client'
+
+import { useState } from "react";
+import { Login } from "./log";
+import { Reg } from "./reg";
 
 export const Access = ()=> {
+        const [activeLogin,setActiveLogin] = useState(false);
+        const [activeReg,setActiveReg] = useState(false);
     return(
+        <>
         <div className="flex gap-[78px] items-center justify-center flex-col Access_container max-w-[1440px] w-full mx-auto px-[80px] py-[130px]">
             <div><h1 className="text-[#111827] font-[700] text-[60px] logo">Getting access</h1></div>
             <div className="mt-[70px]  flex gap-[32px]  ">
@@ -79,7 +87,13 @@ export const Access = ()=> {
                     </div>
                 </div>
             </div>
-            <div><button className="bg rounded-[999999px]  text-white font-[500] text-[18px] w-[212px] h-[52px] cursor-pointer">Get Access</button></div>
+            <div><button className="bg rounded-[999999px]  text-white font-[500] text-[18px] w-[212px] h-[52px] cursor-pointer" onClick={()=> {
+                setActiveReg(true)
+            }}>Get Access</button></div>
         </div>
+         {activeLogin&& <Login setActiveLog={setActiveLogin} setActiveReg={setActiveReg}/>}
+                {activeReg && <Reg setActiveLog={setActiveLogin} setActiveReg={setActiveReg}/>}
+        </>
+
     )
 }

@@ -1,6 +1,6 @@
 export const TrustUs = ()=> {
     return(
-        <div className="bg-[#F9FAFB] trustus_container">
+        <div id="trust" className="bg-[#F9FAFB] trustus_container">
             <div className="px-[136px] max-w-[1440px] mx-auto w-full pt-[122px] pb-[138px] flex flex-col items-center justify-center gap-[62px]">
                 <div><h1 className="text-[#111827] font-[600] text-[60px] text-center">Why You Can Trust Us</h1></div>
                 <div className="grid grid-cols-2 gap-[48px]">

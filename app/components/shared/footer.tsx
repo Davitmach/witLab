@@ -6,8 +6,8 @@ export const Footer = ()=> {
             <div className="max-w-[1440px] w-full mx-auto pt-[108px] pl-[137px] pr-[87px] flex flex-col pb-[37px] footer_top_bar">
                 <div className="flex w-full justify-between">
                     <div>
-                        <div><h1 className="font-[600] text-[50px] text-[#6E6E73]"><span className="text-[black]">W</span>IT LAB ©</h1></div>
-                        <div><span className="text-[#6B7280] font-[600] text-[32px] mail">info@witlab.us</span></div>
+                        <div><a href="#" className="font-[600] text-[50px] text-[#6E6E73]"><span className="text-[black]">W</span>IT LAB ©</a></div>
+                        <div><span className="text-[#6B7280] font-[600] text-[32px] mail"><a href="mailto:info@witlab.us">info@witlab.us</a></span></div>
                     </div>
                     <div><p className="max-w-[226px] w-full text-[#6B7280] text-[26px] font-[400]">2108 N ST STE N SACRAMENTO,
 CA95816, US</p></div>
