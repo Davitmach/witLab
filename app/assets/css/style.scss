@@ -324,7 +324,7 @@ margin-bottom: 135px;
             align-items: center;
             &::before {
                 content: url('/ca.svg');
-                margin-top: 2px;
+                margin-top: -15px;
                 margin-right: 2px;
             }
         }
@@ -377,9 +377,11 @@ margin-bottom: 135px;
        }
         .verif {
             color: #16A34A;
-            font-size: 13px;
+            font-size: 12px;
          display: flex;
+@media (max-width:3) {
 
+}
             &::before {
                 content: url('/verif.png');
                 margin-right: 4px;
@@ -569,7 +571,7 @@ footer {
 
 .animate-scroll {
   
-  animation: scroll 30s linear infinite;
+  animation: scroll 60s linear infinite;
   @media (max-width:1000px) {
     gap: 30px;
   }

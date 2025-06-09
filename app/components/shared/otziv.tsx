@@ -52,7 +52,7 @@ export const Otziv = ()=> {
    <div className="bottom_bar w-full">
     <div className="flex items-center justify-center"><h1 className="font-[600] text-[38px] text-[#1F2937]">What Our Users Say</h1></div>
     <div className="w-full flex items-center justify-start gap-[40px] mt-[20px] ">
-        <div className="w-[239px] shrink-0  flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
+        <div className="w-[239px] h-[274px]  shrink-0  flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
             <div className="flex items-end gap-[16px]">
                 <div><Image alt="a" src={'/user1.png'}  width={48} height={48} /></div>
                 <div className="flex flex-col gap-[4px] translate-y-[4px]">
@@ -66,7 +66,7 @@ export const Otziv = ()=> {
                 <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_us">New York, US • 21 days ago</span></div>
             </div>
         </div>
-        <div className="w-[239px] shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
+        <div className="w-[239px] h-[274px]  shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
             <div className="flex items-end gap-[16px]">
                 <div><Image alt="a" src={'/user2.png'}  width={48} height={48}/></div>
                 <div className="flex flex-col gap-[4px] translate-y-[4px]">
@@ -77,10 +77,10 @@ export const Otziv = ()=> {
             <div>
                    <div className="stars"><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/></div>
                 <div className="mt-[10px]"><p className="text-[#4B5563] text-[14px]">"This service helped me see my past relationships in a new light. I began to understand the patterns behind my choices. It’s...</p></div>
-                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_ca">Toronto, CA • 7 day ago</span></div>
+                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_ca max-w-[150px] ">Toronto, CA • 7 day ago</span></div>
             </div>
         </div>
-        <div className="w-[239px] shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
+        <div className="w-[239px] h-[274px]  shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
             <div className="flex items-end gap-[16px]">
                 <div><Image alt="a" src={'/user3.png'}  width={48} height={48}/></div>
                 <div className="flex flex-col gap-[4px] translate-y-[4px]">
@@ -91,10 +91,10 @@ export const Otziv = ()=> {
             <div>
                <div className="stars"><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/halfStar.png'} width={16} height={16}/></div>
                 <div className="mt-[10px]"><p className="text-[#4B5563] text-[14px]">"I used to have no idea why every new relationship followed the same script. Here, I finally got to understand myself — and ...</p></div>
-                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_gb">London, UK • 3 days ago</span></div>
+                <div className="mt-[10px]"><span className="text-[#6B7280] text-[12px] flag_gb">London, UK • 3 days ago</span></div>
             </div>
         </div>
-        <div className="w-[239px] shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
+        <div className="w-[239px]  h-[274px] shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
             <div className="flex items-end gap-[16px]">
                 <div><Image alt="a" src={'/user4.png'}  width={48} height={48}/></div>
                 <div className="flex flex-col gap-[4px] translate-y-[4px]">
@@ -105,7 +105,7 @@ export const Otziv = ()=> {
             <div>
                  <div className="stars"><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/></div>
                 <div  className="mt-[10px]"><p className="text-[#4B5563] text-[14px]">"This isn’t just a psychological test — it feels like a conversation with someone who truly understands you. I’ve lear...</p></div>
-                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_ca">Toronto, CA • 1 day ago</span></div>
+                <div className="mt-[10px]"><span className="text-[#6B7280] text-[12px] flag_ca">Toronto, CA • 1 day ago</span></div>
             </div>
         </div>
     </div>
