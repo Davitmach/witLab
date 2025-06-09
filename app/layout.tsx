@@ -19,6 +19,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+
 }>) {
   return (
     <html lang="en">
@@ -26,6 +27,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
       >
         {children}
+    
       </body>
     </html>
   );

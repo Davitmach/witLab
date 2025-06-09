@@ -13,9 +13,9 @@ export const Footer = ()=> {
 CA95816, US</p></div>
                 </div>
                 <div className="flex w-full justify-end gap-[18px] mt-[50px] menu">
-                    <div><a href="" className="decoration-0 text-[#6B7280] font-[600] text-[20px]">Terms of Service</a></div>
-                    <div><a href="" className="decoration-0 text-[#6B7280] font-[600] text-[20px]">Privacy Policy</a></div>
-                    <div><a href="" className="decoration-0 text-[#6B7280] font-[600] text-[20px]">Refund Policy</a></div>
+                    <div><a href="/terms" className="decoration-0 text-[#6B7280] font-[600] text-[20px]">Terms of Service</a></div>
+                    <div><a href="/privacy" className="decoration-0 text-[#6B7280] font-[600] text-[20px]">Privacy Policy</a></div>
+                    <div><a href="/refund" className="decoration-0 text-[#6B7280] font-[600] text-[20px]">Refund Policy</a></div>
                 </div>
             </div>
             </div>

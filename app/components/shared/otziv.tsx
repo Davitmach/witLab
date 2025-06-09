@@ -63,7 +63,7 @@ export const Otziv = ()=> {
             <div>
                   <div className="stars"><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/></div>   
                 <div className="mt-[10px]"><p className="text-[#4B5563] text-[14px]">"The more questions I answered, the clearer it became why I keep repeating the same mistakes in relationships. This isn’t just ...  </p></div>
-                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px]">New York, US • 21 days ago</span></div>
+                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_us">New York, US • 21 days ago</span></div>
             </div>
         </div>
         <div className="w-[239px] shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
@@ -77,7 +77,7 @@ export const Otziv = ()=> {
             <div>
                    <div className="stars"><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/></div>
                 <div className="mt-[10px]"><p className="text-[#4B5563] text-[14px]">"This service helped me see my past relationships in a new light. I began to understand the patterns behind my choices. It’s...</p></div>
-                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px]">Toronto, CA • 7 day ago</span></div>
+                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_ca">Toronto, CA • 7 day ago</span></div>
             </div>
         </div>
         <div className="w-[239px] shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
@@ -91,7 +91,7 @@ export const Otziv = ()=> {
             <div>
                <div className="stars"><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/halfStar.png'} width={16} height={16}/></div>
                 <div className="mt-[10px]"><p className="text-[#4B5563] text-[14px]">"I used to have no idea why every new relationship followed the same script. Here, I finally got to understand myself — and ...</p></div>
-                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px]">London, UK • 3 days ago</span></div>
+                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_gb">London, UK • 3 days ago</span></div>
             </div>
         </div>
         <div className="w-[239px] shrink-0 flex flex-col gap-[15px] bg-[#F9FAFB] border border-[#F3F4F6] rounded-[48px] p-[25px]">
@@ -105,7 +105,7 @@ export const Otziv = ()=> {
             <div>
                  <div className="stars"><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/><Image quality={100} alt="" src={'/star.png'} width={16} height={16}/></div>
                 <div  className="mt-[10px]"><p className="text-[#4B5563] text-[14px]">"This isn’t just a psychological test — it feels like a conversation with someone who truly understands you. I’ve lear...</p></div>
-                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px]">Toronto, CA • 1 day ago</span></div>
+                <div className="mt-[5px]"><span className="text-[#6B7280] text-[12px] flag_ca">Toronto, CA • 1 day ago</span></div>
             </div>
         </div>
     </div>
