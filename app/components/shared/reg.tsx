@@ -132,7 +132,9 @@ document.body.style.overflow ='auto'
         </div>
 
         {/* Close Button */}
-        <div className="absolute top-[32px] right-[32px] cursor-pointer" onClick={() => props.setActiveReg(false)}>
+        <div className="absolute top-[32px] right-[32px] cursor-pointer" onClick={() => {props.setActiveReg(false)
+          document.body.style.overflow ='auto'
+        }}>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.0445 2.54453C11.4839 2.10508 11.4839 1.3914 11.0445 0.95195C10.605 0.512497 9.89136 0.512497 9.4519 0.95195L5.74995 4.65742L2.04448 0.955466C1.60503 0.516013 0.891357 0.516013 0.451904 0.955466C0.0124512 1.39492 0.0124512 2.10859 0.451904 2.54804L4.15737 6.25L0.45542 9.95547C0.0159669 10.3949 0.0159669 11.1086 0.45542 11.548C0.894873 11.9875 1.60854 11.9875 2.048 11.548L5.74995 7.84257L9.45542 11.5445C9.89487 11.984 10.6085 11.984 11.048 11.5445C11.4875 11.1051 11.4875 10.3914 11.048 9.95195L7.34253 6.25L11.0445 2.54453Z" fill="#9CA3AF" />
           </svg>

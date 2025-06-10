@@ -127,7 +127,9 @@ document.body.style.overflow ='auto'
         </div>
 
         <button
-          onClick={() => setActiveLog(false)}
+          onClick={() => {setActiveLog(false)
+            document.body.style.overflow ='auto'
+          }}
           className="cursor-pointer absolute top-8 right-8"
         >
           <svg
