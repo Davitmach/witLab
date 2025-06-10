@@ -57,11 +57,11 @@ export const Header = ()=> {
                 setActiveReg(true)
                 setActiveLogin(false);
             }}>Sing Up</button>
-            <FontAwesomeIcon onClick={()=> {
+            <FontAwesomeIcon width={35} onClick={()=> {
                 setFirst(false)
                setActive(!active)
                
-            }} className="Menu_btn"  cursor={'pointer'} fontSize={23} icon={active==false? faBars:faXmark} /></div>
+            }} className="Menu_btn w-[35px]"  cursor={'pointer'} fontSize={23} icon={active==false? faBars:faXmark} /></div>
   
     </div>
         </header>
