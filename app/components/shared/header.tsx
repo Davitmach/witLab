@@ -38,15 +38,21 @@ export const Header = ()=> {
             <div className="logo"><a href="#" className="flex text-[20px] font-[700] text-[#6E6E73]"><span className="text-[black]">W</span>IT LAB</a></div>
             <div className={`menu ${first==true ? 'disableFirst' : active == true? 'activeMenu' :'disableMenu'}`}>
                 <ul className="flex items-center gap-[31px]">
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="#">Home</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#" onClick={()=> {
+                        setActive(false)
+                    }}>Home</a></li>
                     <li><a className="cursor-pointer text-[16px] font-[400] font-[inter]" onClick={()=> {
                         HandleScroll('#InfoBlock')
                     }}>How It Works</a></li>
                     <li><a className="cursor-pointer text-[16px] font-[400] font-[inter]" onClick={()=> {
                         HandleScroll('#Reviews')
                     }}>Reviews</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="#trust">Why Trust Us</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="#question">FAQ</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#trust" onClick={()=> {
+                        setActive(false)
+                    }}>Why Trust Us</a></li>
+                    <li><a className="text-[16px] font-[400] font-[inter]" href="#question" onClick={()=> {
+                        setActive(false)
+                    }}>FAQ</a></li>
                 </ul>
             </div>
             <div className="user flex gap-[20px] items-center w-[200px]"><button className="text-nowrap rounded-[999999px] w-[90px] h-[40px] flex items-center font-[inter] justify-center text-black font-[500] cursor-pointer text-[16px]" onClick={()=> {
