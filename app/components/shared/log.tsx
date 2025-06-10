@@ -30,12 +30,13 @@ const [send,setSend] = useState(false);
     if(send == true) {
 setTimeout(()=> {
 setSend(false)
-},2000)
+setActiveLog(false)
+},5000)
     }
    },[send])
   return (<>
     <div className="fixed top-0 left-0 z-[9999999999999] w-full h-screen flex items-center justify-center bg-[#ABA8A880] backdrop-blur-2xl">
-      <div className="relative mx-2 max-w-[512px] w-full rounded-[48px] bg-white p-[33px] py-[37px] flex flex-col items-center gap-[30px]">
+   {send == false?   <div className="relative mx-2 max-w-[512px] w-full rounded-[48px] bg-white p-[33px] py-[37px] flex flex-col items-center gap-[30px]">
         <h1 className="text-2xl font-bold text-black">Log In</h1>
 
         <div className="w-full mt-5">
@@ -139,8 +140,7 @@ setSend(false)
           </svg>
         </button>
       </div>
-    </div>
-    {send&& <div className="flex flex-col items-center justify-center -translate-y-[50%] bg-[#FFFFFF] -translate-x-[50%] success max-w-[512px] w-full fixed z-[9999999999] top-[50%] left-[50%] border border-[#E5E7EB] rounded-[48px] h-[416px] ">
+    :<div className="flex flex-col items-center justify-center -translate-y-[50%] bg-[#FFFFFF] -translate-x-[50%] success max-w-[512px] w-full fixed z-[9999999999] top-[50%] left-[50%] border border-[#E5E7EB] rounded-[48px] h-[416px] ">
         <div><h1 className="  font-[700] text-[#000000] text-[24px]">Successfully</h1></div>
         {animationData && (
         <Lottie
@@ -151,7 +151,10 @@ setSend(false)
           autoplay={true}
         />
       )}
-    </div>}
+    </div>  
+    }
+    </div>
+
     </>
   );
 };

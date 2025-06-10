@@ -9,6 +9,26 @@ export const Header = ()=> {
     const [first,setFirst] = useState(true);
     const [activeLogin,setActiveLogin] = useState(false);
     const [activeReg,setActiveReg] = useState(false);
+       const HandleScroll = (page:string) => {
+   
+      const targetElement = document.querySelector(page);
+      const header = document.querySelector('header'); // Получаем элемент header
+      if (targetElement && header) {
+        // Получаем высоту header
+        const headerHeight = header.offsetHeight;
+  
+        // Получаем позицию элемента
+        const position = targetElement.getBoundingClientRect();
+  
+        // Прокручиваем страницу с учётом высоты header
+        window.scrollTo({
+          top: position.top + window.pageYOffset - headerHeight-20, // Учитываем высоту header
+          left: 0,
+          behavior: 'smooth',
+        });
+    }
+
+  };
     return(
         <>
         <header className="z-[999999] backdrop-blur-[20px]    sticky top-[0] w-full px-[104px] py-[22px] flex justify-between items-center border-b border-[#E5E7EB]">
@@ -18,8 +38,12 @@ export const Header = ()=> {
             <div className={`menu ${first==true ? 'disableFirst' : active == true? 'activeMenu' :'disableMenu'}`}>
                 <ul className="flex items-center gap-[31px]">
                     <li><a className="text-[16px] font-[400] font-[inter]" href="#">Home</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="#InfoBlock">How It Works</a></li>
-                    <li><a className="text-[16px] font-[400] font-[inter]" href="#Reviews">Reviews</a></li>
+                    <li><a className="cursor-pointer text-[16px] font-[400] font-[inter]" onClick={()=> {
+                        HandleScroll('#InfoBlock')
+                    }}>How It Works</a></li>
+                    <li><a className="cursor-pointer text-[16px] font-[400] font-[inter]" onClick={()=> {
+                        HandleScroll('#Reviews')
+                    }}>Reviews</a></li>
                     <li><a className="text-[16px] font-[400] font-[inter]" href="#trust">Why Trust Us</a></li>
                     <li><a className="text-[16px] font-[400] font-[inter]" href="#question">FAQ</a></li>
                 </ul>

@@ -37,13 +37,14 @@ const [send,setSend] = useState(false);
     if(send == true) {
 setTimeout(()=> {
 setSend(false)
-},2000)
+props.setActiveReg(false)
+},5000)
     }
    },[send])
   return (
     <>
     <div className="flex items-center justify-center backdrop-blur-2xl fixed top-0 left-0 w-full h-screen bg-[#ABA8A880] z-[9999999999999]">
-      <div className="mx-[10px] relative max-w-[512px] w-full rounded-[48px] flex flex-col items-center gap-[30px] bg-[#FFFFFF] py-[37px] px-[33px]">
+    { send==false ? <div className="mx-[10px] relative max-w-[512px] w-full rounded-[48px] flex flex-col items-center gap-[30px] bg-[#FFFFFF] py-[37px] px-[33px]">
         <div><h1 className="font-[700] text-[24px] text-black">Sign Up</h1></div>
         <div className="mt-[20px] w-full">
 
@@ -124,7 +125,7 @@ setSend(false)
           <h1 className="text-[#000000] font-[500] text-[14px] cursor-pointer" onClick={() => {
             props.setActiveLog(true);
             props.setActiveReg(false);
-          }}>Sign In</h1>
+          }}>Log In</h1>
         </div>
 
         {/* Close Button */}
@@ -133,9 +134,7 @@ setSend(false)
             <path d="M11.0445 2.54453C11.4839 2.10508 11.4839 1.3914 11.0445 0.95195C10.605 0.512497 9.89136 0.512497 9.4519 0.95195L5.74995 4.65742L2.04448 0.955466C1.60503 0.516013 0.891357 0.516013 0.451904 0.955466C0.0124512 1.39492 0.0124512 2.10859 0.451904 2.54804L4.15737 6.25L0.45542 9.95547C0.0159669 10.3949 0.0159669 11.1086 0.45542 11.548C0.894873 11.9875 1.60854 11.9875 2.048 11.548L5.74995 7.84257L9.45542 11.5445C9.89487 11.984 10.6085 11.984 11.048 11.5445C11.4875 11.1051 11.4875 10.3914 11.048 9.95195L7.34253 6.25L11.0445 2.54453Z" fill="#9CA3AF" />
           </svg>
         </div>
-      </div>
-    </div>
-     {send&& <div className="flex flex-col items-center justify-center -translate-y-[50%] bg-[#FFFFFF] -translate-x-[50%] success max-w-[512px] w-full fixed z-[9999999999] top-[50%] left-[50%] border border-[#E5E7EB] rounded-[48px] h-[416px] ">
+      </div>: <div className="flex flex-col items-center justify-center -translate-y-[50%] bg-[#FFFFFF] -translate-x-[50%] success max-w-[512px] w-full fixed z-[9999999999] top-[50%] left-[50%] border border-[#E5E7EB] rounded-[48px] h-[416px] ">
         <div><h1 className="  font-[700] text-[#000000] text-[24px]">Successfully</h1></div>
         {animationData && (
         <Lottie
@@ -146,7 +145,10 @@ setSend(false)
           autoplay={true}
         />
       )}
-    </div>}
+    </div>
+}
+    </div>
+    
     </>
   );
 };

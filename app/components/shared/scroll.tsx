@@ -78,7 +78,7 @@ export const Scroll = () => {
         <div
           ref={scrollRef}
           className={`flex flex-col gap-[48px] ${inView ==true?'overflow-y-auto' :'overflow-y-hidden'} scrol_box w-full px-4 translate-x-[-300px]`}
-          style={{ height: "calc(100vh)" }}
+          style={{ height: "100vh", overscrollBehavior: "contain", touchAction: "pan-y" }}
         >
           {/* Слайды */}
           <div className="flex flex-col gap-[60px] h-[100vh] shrink-0 items-center justify-center ">
@@ -120,21 +120,22 @@ export const Scroll = () => {
         </div>
        <div className="emoji absolute left-[60%] top-[50%] translate-y-[-50%] w-[140px] h-[60px] transition-all duration-500 ease-in-out">
   <img
-    src="/emoji1.png"
+    src="/emoji1.jpg"
     alt="emoji1"
+
     className={`w-[140px] h-[60px] object-contain absolute top-0 left-0 transition-opacity duration-500 ${
       activeSection === 1 ? 'opacity-100' : 'opacity-0'
     }`}
   />
   <img
-    src="/emoji2.png"
+    src="/emoji2.jpg"
     alt="emoji2"
     className={`w-[140px] h-[60px] object-contain absolute top-0 left-0 transition-opacity duration-500 ${
       activeSection === 2 ? 'opacity-100' : 'opacity-0'
     }`}
   />
   <img
-    src="/emoji3.png"
+    src="/emoji3.jpg"
     alt="emoji3"
     className={`w-[140px] h-[60px] object-contain absolute top-0 left-0 transition-opacity duration-500 ${
       activeSection === 3 ? 'opacity-100' : 'opacity-0'

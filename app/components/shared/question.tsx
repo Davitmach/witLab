@@ -27,7 +27,7 @@ export const Questions = ()=> {
                             }} className="cursor-pointer w-full h-auto py-[20px] px-[24px] flex flex-col">
                         <div>
                             <div><h1>Is there free access to WIT LAB?</h1></div>
-                            <div className={`${active =='1'&&'Active'}  duration-300 cursor-pointer`} ><svg  width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className={`${active =='1'?'Active' :'Disable'}  duration-300 cursor-pointer`} ><svg  width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.29377 0.293945C6.6844 -0.0966797 7.31877 -0.0966797 7.7094 0.293945L13.7094 6.29395C14.1 6.68457 14.1 7.31895 13.7094 7.70957C13.3188 8.1002 12.6844 8.1002 12.2938 7.70957L7.00002 2.41582L1.70627 7.70645C1.31565 8.09707 0.681274 8.09707 0.290649 7.70645C-0.0999756 7.31582 -0.0999756 6.68145 0.290649 6.29082L6.29065 0.29082L6.29377 0.293945Z" fill="#1F2937"/>
 </svg>
 </div>
@@ -40,7 +40,7 @@ export const Questions = ()=> {
                             }} className="cursor-pointer w-full h-auto py-[20px] px-[24px] flex flex-col">
                         <div>
                             <div><h1>How secure is my data with WIT LAB?</h1></div>
-                            <div className={`${active =='2'&&'Active'} duration-300 cursor-pointer`} onClick={()=>HandleClick('2')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className={`${active =='2'?'Active':'Disable'} duration-300 cursor-pointer`} onClick={()=>HandleClick('2')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.29377 0.293945C6.6844 -0.0966797 7.31877 -0.0966797 7.7094 0.293945L13.7094 6.29395C14.1 6.68457 14.1 7.31895 13.7094 7.70957C13.3188 8.1002 12.6844 8.1002 12.2938 7.70957L7.00002 2.41582L1.70627 7.70645C1.31565 8.09707 0.681274 8.09707 0.290649 7.70645C-0.0999756 7.31582 -0.0999756 6.68145 0.290649 6.29082L6.29065 0.29082L6.29377 0.293945Z" fill="#1F2937"/>
 </svg>
 </div>
@@ -50,7 +50,8 @@ export const Questions = ()=> {
     <p>
       We take your privacy seriously. All personal data is handled in strict accordance with our{' '}
    
-        <a
+        <a 
+        onClick={(e)=> e.stopPropagation()}
         href="/privacy"
           style={{
             color: '#1F98F5',
@@ -80,12 +81,12 @@ export const Questions = ()=> {
                             }} className="cursor-pointer w-full h-auto py-[20px] px-[24px] flex flex-col">
                         <div>
                             <div><h1>What kind of support do you offer?</h1></div>
-                            <div className={`${active =='3'&&'Active'} duration-300 cursor-pointer`} onClick={()=>HandleClick('3')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className={`${active =='3'?'Active':'Disable'} duration-300 cursor-pointer`} onClick={()=>HandleClick('3')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.29377 0.293945C6.6844 -0.0966797 7.31877 -0.0966797 7.7094 0.293945L13.7094 6.29395C14.1 6.68457 14.1 7.31895 13.7094 7.70957C13.3188 8.1002 12.6844 8.1002 12.2938 7.70957L7.00002 2.41582L1.70627 7.70645C1.31565 8.09707 0.681274 8.09707 0.290649 7.70645C-0.0999756 7.31582 -0.0999756 6.68145 0.290649 6.29082L6.29065 0.29082L6.29377 0.293945Z" fill="#1F2937"/>
 </svg>
 </div>
                         </div>
-                        {active=="3"&& <div><p> Our team is always here to help. Email us at {' '} <a style={{
+                        {active=="3"&& <div><p> Our team is always here to help. Email us at {' '} <a href="mailto:info@witlab.us"  onClick={(e) => e.stopPropagation()} style={{
             color: '#1F98F5',
             textDecoration: 'underline',
             textDecorationColor: '#1F98F5',
@@ -98,7 +99,7 @@ export const Questions = ()=> {
                             }} className="cursor-pointer w-full h-auto py-[20px] px-[24px] flex flex-col">
                         <div>
                             <div><h1>How can I manage or cancel my subscription?</h1></div>
-                            <div className={`${active =='4'&&'Active'} duration-300 cursor-pointer`} onClick={()=>HandleClick('4')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className={`${active =='4'?'Active':"Disable"} duration-300 cursor-pointer`} onClick={()=>HandleClick('4')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.29377 0.293945C6.6844 -0.0966797 7.31877 -0.0966797 7.7094 0.293945L13.7094 6.29395C14.1 6.68457 14.1 7.31895 13.7094 7.70957C13.3188 8.1002 12.6844 8.1002 12.2938 7.70957L7.00002 2.41582L1.70627 7.70645C1.31565 8.09707 0.681274 8.09707 0.290649 7.70645C-0.0999756 7.31582 -0.0999756 6.68145 0.290649 6.29082L6.29065 0.29082L6.29377 0.293945Z" fill="#1F2937"/>
 </svg>
 </div>
@@ -110,13 +111,13 @@ update payment details.
 
 It only takes a minute, and you’ll see confirmation of the changes immediately. </p></div>}
                     </div>
-                    <div>
-                        <div className="cursor-pointer" onClick={()=> {
+                    <div className="cursor-pointer" onClick={()=> {
                                 HandleClick('5') 
                                 
                             }}>
+                        <div >
                             <div><h1>How do I request a refund?</h1></div>
-                            <div className={`${active =='5'&&'Active'} duration-300 cursor-pointer`} onClick={()=>HandleClick('5')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className={`${active =='5'?'Active':'Disable'} duration-300 cursor-pointer`} onClick={()=>HandleClick('5')}><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.29377 0.293945C6.6844 -0.0966797 7.31877 -0.0966797 7.7094 0.293945L13.7094 6.29395C14.1 6.68457 14.1 7.31895 13.7094 7.70957C13.3188 8.1002 12.6844 8.1002 12.2938 7.70957L7.00002 2.41582L1.70627 7.70645C1.31565 8.09707 0.681274 8.09707 0.290649 7.70645C-0.0999756 7.31582 -0.0999756 6.68145 0.290649 6.29082L6.29065 0.29082L6.29377 0.293945Z" fill="#1F2937"/>
 </svg>
 </div>
@@ -127,6 +128,7 @@ It only takes a minute, and you’ll see confirmation of the changes immediately
       You can find full terms in our{' '}
       <a
         href="/refund"
+        onClick={(e) => e.stopPropagation()}
         style={{ 
           color: '#1F98F5', 
           textDecoration: 'underline',
@@ -141,8 +143,9 @@ It only takes a minute, and you’ll see confirmation of the changes immediately
       You can request a refund within 14 days of your first payment.<br />
       Refunds apply only to the initial charge and do not cover any future weekly renewals.<br />
       To request a refund, email {" "}
-      <a style={{
+      <a href="mailto:info@witlab.us" onClick={(e) => e.stopPropagation()} style={{
             color: '#1F98F5',
+            
             textDecoration: 'underline',
             textDecorationColor: '#1F98F5',
             cursor: 'pointer',
