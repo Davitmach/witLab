@@ -31,7 +31,7 @@ export const Header = ()=> {
   };
     return(
         <>
-        <header className="z-[999999] backdrop-blur-[20px]    sticky top-[0] w-full px-[104px] py-[22px] flex justify-between items-center border-b border-[#E5E7EB]">
+        <header className="z-[9999999999] backdrop-blur-[20px]    sticky top-[0] w-full px-[104px] py-[22px] flex justify-between items-center border-b border-[#E5E7EB]">
          
             <div className="max-w-[1440px] w-full mx-auto flex justify-between items-center  ">
             <div className="logo"><a href="#" className="flex text-[20px] font-[700] text-[#6E6E73]"><span className="text-[black]">W</span>IT LAB</a></div>
