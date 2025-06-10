@@ -44,7 +44,7 @@ export const Plans = ()=> {
     </div>
     <div><button className="cursor-pointer bg text-white w-[212px] h-[52px] rounded-[99999px] font-[500] text-[18px]" onClick={()=> {
         setActiveReg(true)
-    }}>View Plans</button></div>
+    }}>Get Access</button></div>
 </div>
         </div>
         {activeLogin&& <Login setActiveLog={setActiveLogin} setActiveReg={setActiveReg}/>}

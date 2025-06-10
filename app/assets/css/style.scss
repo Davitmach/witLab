@@ -13,21 +13,21 @@ header {
     @media (max-width:1024px) {
         padding: 22px 50px;
     }
-      @media (max-width:768px) {
+      @media (max-width:897px) {
         padding: 22px 0;
     }
  .logo {
-    @media (max-width:768px) {
+    @media (max-width:897px) {
         margin-left: 20px;
     }
  }
  .user {
-    @media (max-width:768px) {
+    @media (max-width:897px) {
         margin-right: 20px;
     }
  }
 .menu {
-    @media (max-width:768px) {
+    @media (max-width:897px) {
         position: absolute;
         background-color: white;
         top: 63px;
@@ -44,19 +44,19 @@ header {
 }
     .Menu_btn {
         display: none;
-        @media (max-width:768px) {
+        @media (max-width:897px) {
             display: flex;
         }
     }
     .disableMenu {
-        @media (max-width:768px) {
+        @media (max-width:897px) {
         opacity: 0;
         visibility: hidden;
         transition: .4s;
         }
     }
     .activeMenu {
-        @media (max-width:768px) {
+        @media (max-width:897px) {
             width: 100% !important;
        visibility: visible;
         opacity: 1;
@@ -64,7 +64,7 @@ header {
         }       
     }
     .disableFirst {
-        @media (max-width:768px) {
+        @media (max-width:897px) {
             opacity: 0;
             visibility: hidden;
         }
