@@ -34,39 +34,79 @@ export const Scroll = () => {
   }, []);
 
   // Блокируем прокрутку основной страницы, если scrollRef может сам скроллиться
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!inView || !container) return;
-// container.scrollIntoView({
-//     behavior:'smooth'
-// })
-    const onWheel = (e: WheelEvent) => {
-      const deltaY = e.deltaY;
-      const scrollTop = container.scrollTop;
-      const scrollHeight = container.scrollHeight;
-      const clientHeight = container.clientHeight;
+//   useEffect(() => {
+//     const container = scrollRef.current;
+//     if (!inView || !container) return;
+// // container.scrollIntoView({
+// //     behavior:'smooth'
+// // })
+//     const onWheel = (e: WheelEvent) => {
+//       const deltaY = e.deltaY;
+//       const scrollTop = container.scrollTop;
+//       const scrollHeight = container.scrollHeight;
+//       const clientHeight = container.clientHeight;
 
-      const isScrollingDown = deltaY > 0;
-      const isAtTop = scrollTop === 0;
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+//       const isScrollingDown = deltaY > 0;
+//       const isAtTop = scrollTop === 0;
+//       const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
 
-      const canScrollInside =
-        (isScrollingDown && !isAtBottom) ||
-        (!isScrollingDown && !isAtTop);
+//       const canScrollInside =
+//         (isScrollingDown && !isAtBottom) ||
+//         (!isScrollingDown && !isAtTop);
 
-      if (canScrollInside) {
+//       if (canScrollInside) {
         
         
-        // e.stopPropagation(); // блокируем скролл наружу
-      }
-    };
+//         // e.stopPropagation(); // блокируем скролл наружу
+//       }
+//     };
 
-    container.addEventListener("wheel", onWheel, { passive: true });
+//     container.addEventListener("wheel", onWheel, { passive: true });
 
-    return () => {
-      container.removeEventListener("wheel", onWheel);
-    };
-  }, [inView]);
+//     return () => {
+//       container.removeEventListener("wheel", onWheel);
+//     };
+//   }, [inView]);
+useEffect(() => {
+  const container = scrollRef.current;
+  if (!inView || !container) return;
+
+  let startY = 0;
+
+  const onTouchStart = (e: TouchEvent) => {
+    startY = e.touches[0].clientY;
+  };
+
+  const onTouchMove = (e: TouchEvent) => {
+    const currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+
+    const scrollTop = container.scrollTop;
+    const scrollHeight = container.scrollHeight;
+    const clientHeight = container.clientHeight;
+
+    const isAtTop = scrollTop <= 0;
+    const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+
+    // Потянули вниз (вверх по экрану), но уже вверху — блокируем
+    if (deltaY > 0 && isAtTop) {
+      e.preventDefault();
+    }
+
+    // Потянули вверх (вниз по экрану), но уже внизу — блокируем
+    if (deltaY < 0 && isAtBottom) {
+      e.preventDefault();
+    }
+  };
+
+  container.addEventListener("touchstart", onTouchStart, { passive: true });
+  container.addEventListener("touchmove", onTouchMove, { passive: false });
+
+  return () => {
+    container.removeEventListener("touchstart", onTouchStart);
+    container.removeEventListener("touchmove", onTouchMove);
+  };
+}, [inView]);
 
 
   return (
@@ -78,7 +118,7 @@ export const Scroll = () => {
         <div
           ref={scrollRef}
           className={`flex flex-col gap-[48px] ${inView ==true?'overflow-y-auto' :'overflow-y-hidden'} scrol_box w-full px-4 translate-x-[-300px]`}
-          style={{ height: "100vh", overscrollBehavior: "contain", touchAction: "pan-y" }}
+          style={{ height: "calc(100vh)" }}
         >
           {/* Слайды */}
           <div className="flex flex-col gap-[60px] h-[100vh] shrink-0 items-center justify-center ">
