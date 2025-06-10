@@ -8,7 +8,9 @@ export const Reg = (props: { setActiveLog: React.Dispatch<boolean>, setActiveReg
   const [email, setEmail] = useState('');
   const [agreed, setAgreed] = useState(false);
   const [btnActive, setBtnActive] = useState(false);
-
+useEffect(()=> {
+document.body.style.overflow ='hidden'
+},[])
   useEffect(() => {
     if (fullName.trim() && birthDate.trim() && email.trim() && agreed) {
       setBtnActive(true);
@@ -38,6 +40,7 @@ const [send,setSend] = useState(false);
 setTimeout(()=> {
 setSend(false)
 props.setActiveReg(false)
+document.body.style.overflow ='auto'
 },5000)
     }
    },[send])

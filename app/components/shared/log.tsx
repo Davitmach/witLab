@@ -31,9 +31,13 @@ const [send,setSend] = useState(false);
 setTimeout(()=> {
 setSend(false)
 setActiveLog(false)
+document.body.style.overflow ='auto'
 },5000)
     }
    },[send])
+   useEffect(()=> {
+   document.body.style.overflow ='hidden'
+   },[])
   return (<>
     <div className="fixed top-0 left-0 z-[9999999999999] w-full h-screen flex items-center justify-center bg-[#ABA8A880] backdrop-blur-2xl">
    {send == false?   <div className="relative mx-2 max-w-[512px] w-full rounded-[48px] bg-white p-[33px] py-[37px] flex flex-col items-center gap-[30px]">
